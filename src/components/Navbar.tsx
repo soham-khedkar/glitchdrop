@@ -12,14 +12,11 @@ const styles = {
 };
 
 const Navbar = () => {
-  
   const { login, register } = useKindeAuth();
   const { user } = useKindeAuth();
   const { logout } = useKindeAuth();
 
   // console.log(user);
-
-
 
   return (
     <header className="pb-6 bg-[#101313] text-white lg:pb-0 pt-4 md:pt-0">
@@ -32,7 +29,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-         
           {user && (
             <>
               <div className="hidden text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10">
@@ -49,9 +45,11 @@ const Navbar = () => {
                 <button
                   onClick={logout}
                   type="button"
-                  className={styles.joinButton}
+                  className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium border border-white text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
                 >
-                  Sign out
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                  <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                  <span className="relative text-white">Log Out</span>
                 </button>
               </>
             ) : (
