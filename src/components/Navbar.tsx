@@ -70,17 +70,22 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => register()}
-                  className={styles.joinButton}
                   type="button"
+                  className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium border border-white text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
                 >
-                  Sign up
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                  <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                  <span className="relative text-white">Sign Up</span>
                 </button>
+
                 <button
                   onClick={() => login()}
-                  className={styles.joinButton}
                   type="button"
+                  className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium border border-white text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
                 >
-                  Sign In
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+                  <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+                  <span className="relative text-white">Sign In</span>
                 </button>
               </>
             )}
@@ -92,25 +97,19 @@ const Navbar = () => {
           <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
             <div className="flow-root">
               <div className="flex flex-col px-6 -my-2 space-y-1">
-                <Link to="#" className={styles.mobileLink} title="Features">
-                  Features
-                </Link>
-                <Link to="#" className={styles.mobileLink} title="Solutions">
-                  Solutions
-                </Link>
-                <Link to="#" className={styles.mobileLink} title="Resources">
-                  Resources
-                </Link>
-                <Link to="#" className={styles.mobileLink} title="Pricing">
-                  Pricing
-                </Link>
+                {user && (
+                  <>
+                    <div className="hidden text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+                      <Link to="/fileexchange" className="text-white">
+                        File Exchange
+                      </Link>
+                    </div>
+                  </>
+                )}
               </div>
-            </div>
-
-            <div className="px-6  mt-6">
-              <Link to="#" className={styles.joinButton} role="button">
-                Get started now
-              </Link>
+              <div className="flex flex-col px-6 -my-2 space-y-1">
+                <h1>Contact Us</h1>
+              </div>
             </div>
           </nav>
         )}
