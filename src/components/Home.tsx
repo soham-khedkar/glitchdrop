@@ -8,6 +8,7 @@ import {
 } from "react-icons/hi";
 import { FaArrowRight } from "react-icons/fa";
 import { motion, useAnimation, PanInfo } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   title: string;
@@ -99,35 +100,40 @@ const FeatureCards: React.FC = () => {
     {
       title: "End-to-End Encryption",
       description: "Secure your files with CryptoJS encryption",
-      image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXQ1bDA5ZXhuczBhdmM0YWJjcDF3aDZqcHQ3M2lib2tyMDh0bWt3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/REPL2BIiGhyFO/giphy.gif",
+      image:
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXQ1bDA5ZXhuczBhdmM0YWJjcDF3aDZqcHQ3M2lib2tyMDh0bWt3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/REPL2BIiGhyFO/giphy.gif",
       bgColor: "bg-gradient-to-b from-purple-400 to-indigo-600",
       isFullGif: true,
     },
     {
       title: "Resumable Transfers",
       description: "Never lose progress with Resumable.js",
-      image: "https://media.giphy.com/media/dDCy1VKsop5N22Nulf/giphy.gif?cid=790b7611qjer241ezpur4d0ysg715osh9gny8pb3xllhzewf&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      image:
+        "https://media.giphy.com/media/dDCy1VKsop5N22Nulf/giphy.gif?cid=790b7611qjer241ezpur4d0ysg715osh9gny8pb3xllhzewf&ep=v1_gifs_search&rid=giphy.gif&ct=g",
       bgColor: "bg-gradient-to-b from-green-400 to-teal-600",
       isFullGif: true,
     },
     {
       title: "Fast Transfers",
       description: "Lightning-fast file transfers, even on slow connections",
-      image: "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHQ1b3k4YTVlY2Y2YWFpYXp2NDlncHd4dW02Y3BhbXd2Z3N3aHk3MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Emb1u5OKSGqtQixcEV/giphy.gif",
+      image:
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHQ1b3k4YTVlY2Y2YWFpYXp2NDlncHd4dW02Y3BhbXd2Z3N3aHk3MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Emb1u5OKSGqtQixcEV/giphy.gif",
       bgColor: "bg-gradient-to-b from-yellow-400 to-orange-600",
       isFullGif: true,
     },
     {
       title: "Secure Sharing",
       description: "Share files securely with customizable permissions",
-      image: "https://media.giphy.com/media/9r73dCeJarx5kdXmu2/giphy.gif?cid=790b7611j7r0cesyfrasvkpfcmd6robhgy1exzpqtu0y80e3&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      image:
+        "https://media.giphy.com/media/9r73dCeJarx5kdXmu2/giphy.gif?cid=790b7611j7r0cesyfrasvkpfcmd6robhgy1exzpqtu0y80e3&ep=v1_gifs_search&rid=giphy.gif&ct=g",
       bgColor: "bg-gradient-to-b from-red-400 to-pink-600",
       isFullGif: true,
     },
     {
       title: "Cloud Integration",
       description: "Seamlessly integrate with popular cloud storage services",
-      image: "https://media.giphy.com/media/3oFyD2RpK1Qs4Cl9rq/giphy.gif?cid=790b7611zh5es36523gupnek7rrxx0dlq0qyfyana2hiuoc0&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      image:
+        "https://media.giphy.com/media/3oFyD2RpK1Qs4Cl9rq/giphy.gif?cid=790b7611zh5es36523gupnek7rrxx0dlq0qyfyana2hiuoc0&ep=v1_gifs_search&rid=giphy.gif&ct=g",
       bgColor: "bg-gradient-to-b from-indigo-400 to-purple-600",
       isFullGif: true,
     },
@@ -241,8 +247,7 @@ const Home: React.FC = () => {
       "inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg",
     menuBtn:
       "inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800",
-    section:
-      "relative pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24",
+    section: "relative pt-24 pb-10 sm:pt-32 sm:pb-16 lg:pb-24",
     sectionContent: "px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20",
     title: "text-4xl font-bold sm:text-6xl",
     titleGradient:
@@ -271,6 +276,14 @@ const Home: React.FC = () => {
               Upload, share, and manage your files with ease. Get started today
               and enjoy the benefits of a premium file sharing platform.
             </p>
+            <div className="mt-10">
+              <Link
+                to="/fileexchange"
+                className="text-white p-4 bg-red-700 w-10 h-10 mt-5 rounded-lg"
+              >
+                File Exchange
+              </Link>
+            </div>
           </div>
         </div>
       </section>

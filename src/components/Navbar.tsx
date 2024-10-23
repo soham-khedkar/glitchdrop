@@ -31,7 +31,7 @@ const Navbar = () => {
 
           {user && (
             <>
-              <div className="hidden text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10">
+              <div className=" text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10 ">
                 <Link to="/fileexchange" className="text-white">
                   File Exchange
                 </Link>
