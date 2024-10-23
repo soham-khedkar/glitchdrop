@@ -135,8 +135,8 @@ const FileTransfer = () => {
           <p className="text-green-700 mb-4">
             Share this transfer ID with the recipient:
           </p>
-          <div className="flex items-center gap-4">
-            <code className="flex-1 p-3 bg-white rounded border border-green-200 font-mono text-sm break-all">
+          <div className="flex items-center gap-4 ">
+            <code className="flex-1 p-3 bg-white text-black rounded border border-green-200 font-mono text-sm break-all">
               {transferId}
             </code>
             <button
@@ -144,7 +144,7 @@ const FileTransfer = () => {
                 navigator.clipboard.writeText(transferId);
                 // Optional: Add a toast notification here
               }}
-              className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+              className="flex items-center gap-2 px-4 py-2 bg-green-600 text-black rounded-lg hover:bg-green-700"
             >
               <Share2 className="w-4 h-4" />
               Copy

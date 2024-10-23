@@ -12,19 +12,17 @@ const styles = {
 };
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const { login, register } = useKindeAuth();
   const { user } = useKindeAuth();
   const { logout } = useKindeAuth();
 
   // console.log(user);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+
 
   return (
-    <header className="pb-6 bg-[#101313] text-white lg:pb-0">
+    <header className="pb-6 bg-[#101313] text-white lg:pb-0 pt-4 md:pt-0">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* lg+ */}
         <nav className="flex items-center justify-between h-16 lg:h-20">
@@ -34,17 +32,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <button
-            type="button"
-            className="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? (
-              <FiX className="w-6 h-6" />
-            ) : (
-              <FiMenu className="w-6 h-6" />
-            )}
-          </button>
+         
           {user && (
             <>
               <div className="hidden text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10">
@@ -91,28 +79,6 @@ const Navbar = () => {
             )}
           </div>
         </nav>
-
-        {/* xs to lg */}
-        {isMenuOpen && (
-          <nav className="pt-4 pb-6 bg-white border border-gray-200 rounded-md shadow-md lg:hidden">
-            <div className="flow-root">
-              <div className="flex flex-col px-6 -my-2 space-y-1">
-                {user && (
-                  <>
-                    <div className="hidden text-white mr-6 lg:flex lg:items-center lg:ml-auto lg:space-x-10">
-                      <Link to="/fileexchange" className="text-white">
-                        File Exchange
-                      </Link>
-                    </div>
-                  </>
-                )}
-              </div>
-              <div className="flex flex-col px-6 -my-2 space-y-1">
-                <h1>Contact Us</h1>
-              </div>
-            </div>
-          </nav>
-        )}
       </div>
     </header>
   );
