@@ -274,7 +274,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center w-full h-screen  sm:flex sm:flex-row">
+      <div className="flex flex-col items-center justify-center w-full h-screen sm:flex sm:flex-row">
         <FeatureCards />
       </div>
     </div>
