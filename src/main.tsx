@@ -28,8 +28,8 @@ if (rootElement) {
       <KindeProvider
         clientId="943a0c6673954decbbf41a3e8c80c1f6"
         domain="https://codecrush.kinde.com"
-        redirectUri="http://localhost:5173"
-        logoutUri="http://localhost:5173"
+        redirectUri="https://glitchdrop.vercel.app/"
+        logoutUri="https://glitchdrop.vercel.app/"
       >
         <RouterProvider router={router} />
       </KindeProvider>
